@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Image</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background-color: black;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+          
+        }
+
+        img {
+            width: 250px;
+            height: 200px;
+            object-fit: cover;
+            margin: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background-color: rgb(138, 21, 21);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Change Image</h1>
+
+        <img id="myImage"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKV0iazxV-rELW8c63mpIP3oQ7okG1Dsw8a3Ir7Fp3A&s=10">
+
+        <br>
+
+        <button onclick="changeImage()">
+            Change Image
+        </button>
+
+    </div>
+
+    <script>
+
+        let imageNumber = 0;
+
+        function changeImage() {
+
+            if (imageNumber === 0) {
+
+                document.getElementById("myImage").src =
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuKV0iazxV-rELW8c63mpIP3oQ7okG1Dsw8a3Ir7Fp3A&s=10";
+
+                imageNumber = 1;
+
+            } 
+             else {
+
+                document.getElementById("myImage").src =
+                "https://images.pexels.com/photos/25839656/pexels-photo-25839656.jpeg?cs=srgb&dl=pexels-quibler7-25839656.jpg&fm=jpg";
+
+                imageNumber = 0;
+
+            }
+
+           
+        }
+
+    </script>
+
+</body>
+</html>
